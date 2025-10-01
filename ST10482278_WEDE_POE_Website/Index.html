@@ -3,37 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DaddyLove Tradional Food</title>
+    <title>DaddyLove Traditional Food</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!--Nav/Header-->
-    <header>
-    <img src="Images/Logo.png" alt="Logo" width="400" height="200" align="top"/>
-    <nav>
-        <ul>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="menu.html">Menu</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container">
+            <img src="Images/Logo.png" alt="DaddyLove Logo" class="logo">
+            <nav class="nav">
+                <ul>
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <!-- Main Content -->
-    <main>
-        <section>
-            <h2>Welcome to Daddy Love Traditional Food</h2>
-            <p>This the only place to find the old home cooked meal.
-                cooked to pefection flavour so tender transports you to a time of love and comfort you can only dream of .</p>
-        </section>
-    </main>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Delicious Traditional Food, Delivered With Love</h1>
+            <p>Experience the taste of home-cooked meals made fresh daily.</p>
+            <a href="menu.html" class="btn">Explore Menu</a>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu" id="menu">
+        <div class="container">
+            <h2>Our Popular Dishes</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="Images/Sunbake_Kota.jpg" alt="Dish 1">
+                    <h3>Kota</h3>
+                    <p>Fresh bread infused with crisp chips and desires toppings of your choice.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/nyama yehloko.jpg" alt="Dish 2">
+                    <h3>Nyama Yehloko</h3>
+                    <p>Traditional slow-cooked beef layered in a savory hot sauce.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Full chicken plate.jpg" alt="Dish 3">
+                    <h3>Full Chicken</h3>
+                    <p>Rich in flavour, tender cooked chicken with a side of well prepared Pap or Salads.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2>About DaddyLove</h2>
+            <p>At DaddyLove, we celebrate traditional South African cuisine made with love. Our goal is to bring authentic flavors to your table, crafted from fresh, locally-sourced ingredients.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Have questions or want to place an order? Reach out to us!</p>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Daddy Love Traditional Food</p>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 DaddyLove Traditional Food. All Rights Reserved.</p>
+        </div>
     </footer>
-</body>
-</html>
-    
 </body>
 </html>
