@@ -407,6 +407,19 @@ footer {
     transform: scale(1.05);
 }
 
+/* --- Image Zoom Effect --- */
+.gallery-item img {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-item img.zoomed {
+  transform: scale(1.5);
+  z-index: 10;
+  position: relative;
+}
+
+
 /* Footer */
 .footer {
     background-color: #333;

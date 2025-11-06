@@ -3,11 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daddy Love Menu</title>
+    <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Daddy Love | Traditional Fast Food">
+<meta name="twitter:description" content="Delicious traditional meals served fresh and fast.">
+<meta name="twitter:image" content="https://daddylove.local/images/Logo.png">
+
+        <!-- SEO Meta -->
+   <title>Daddy Love | Traditional Fast Food</title>
+<meta name="description" content="Daddy Love is your home for delicious, authentic South African traditional dishes. Warm meals, great taste, and fast service.">
+<meta name="keywords" content="traditional food, fast food, South African cuisine, pap and chicken, kota, beef stew, dombolo, chakalaka">
+<meta name="author" content="Daddy Love Traditional Fast Food">
+
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://daddylove.local/images/Logo.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Open Graph for Facebook / WhatsApp -->
+<meta property="og:title" content="Daddy Love | Traditional Fast Food">
+<meta property="og:description" content="Taste the tradition! Enjoy your favourite home-style meals freshly prepared.">
+<meta property="og:image" content="https://daddylove.local/images/Logo.png">
+<meta property="og:url" content="https://daddylove.local">
+<meta property="og:type" content="website">
 </head>
 <body>
     <!-- Header / Navigation -->
@@ -36,7 +55,20 @@
             </div>
         </section>
 
-        <section class="menu-items container">
+<section class="menu-filter container">
+  <input type="text" id="search" placeholder="Search dishes...">
+  <select id="categoryFilter">
+    <option value="all">All Categories</option>
+    <option value="magwinya">Magwinya</option>
+    <option value="bundles">Bundles</option>
+    <option value="meat">Meat Meals</option>
+    <option value="kota">Kota</option>
+    <option value="extras">Extras</option>
+  </select>
+  <ul id="suggestions" class="suggestions"></ul>
+</section>
+
+<section class="menu-items container">
             <!-- Magwinya -->
             <div class="menu-category">
                 <h3>Magwinya</h3>
@@ -120,5 +152,38 @@
             <p>&copy; 2025 Daddy Love Traditional Food</p>
         </div>
     </footer>
+<script>
+const searchInput = document.getElementById('search');
+const categoryFilter = document.getElementById('categoryFilter');
+const suggestions = document.getElementById('suggestions');
+const items = document.querySelectorAll('.menu-category li');
+
+searchInput.addEventListener('keyup', function() {
+  const term = this.value.toLowerCase();
+  suggestions.innerHTML = '';
+  items.forEach(li => {
+    const text = li.textContent.toLowerCase();
+    const match = text.includes(term);
+    li.style.display = (match && filterCategory(li)) ? '' : 'none';
+    if (term && match) {
+      const liSuggest = document.createElement('li');
+      liSuggest.textContent = li.textContent;
+      suggestions.appendChild(liSuggest);
+    }
+  });
+});
+
+categoryFilter.addEventListener('change', function() {
+  items.forEach(li => {
+    li.style.display = (filterCategory(li) && li.textContent.toLowerCase().includes(searchInput.value.toLowerCase())) ? '' : 'none';
+  });
+});
+
+function filterCategory(li) {
+  const cat = categoryFilter.value;
+  if (cat === 'all') return true;
+  return li.closest('.menu-category').querySelector('h3').textContent.toLowerCase().includes(cat);
+}
+</script>
 </body>
 </html>
