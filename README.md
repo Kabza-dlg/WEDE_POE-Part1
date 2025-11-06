@@ -74,4 +74,58 @@ The website has been refined with:
 
 •	Flexible layout: Gallery grid adapts to screen size (desktop = multi-column, mobile = stacked).
 
+tacked).
+
+
+Project Further Updated Improvement 
+
+The website has been updated with:
+
+
+Gallery
+
+•	Zoom animation on click to interact with images
+
+•	Page  updated to give a more restaurant experience
+
+
+Menu
+
+•	Dynamic search & filter function added
+
+
+Dynamic Content Enhancement
+
+•	Implemented live filter with Java Script
+
+•	Users type in the search bar → food items hide or show based on match.
+
+
+Implemented SEO
+
+•	Uses logo as featured image previews
+
+•	Google search preview
+
+•	Whatsapp link preview
+
+•	Facebook/Twitter link preview
+ 
+References
+
+Anon., n.d. CSS-Tricks. [Online] 
+Available at: https://css-tricks.com/
+(Accessed 4 11 2025).
+Anon., n.d. TasteAtlas. [Online] 
+Available at: https://www.tasteatlas.com/south-africa
+(Accessed 3 11 2025).
+Anon., n.d. W3Docs. [Online] 
+Available at: https://www.w3docs.com/article/seo-programming-importance-benefits-best-practices.html
+(Accessed 4 11 2025).
+Anon., n.d. W3Schools. [Online 
+Available at: https://www.w3schools.com/js/js_best_practices.asp
+(Accessed 4 11 2025).
+
+
+
 
